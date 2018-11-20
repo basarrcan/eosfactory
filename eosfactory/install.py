@@ -33,10 +33,7 @@ def install(wsl_root=None):
                 Input another existing directory path, or nothing to keep the current one:
                 ''').format(colored(eosio_repository_dir, current_path_color)) + "\n"))
         else:
-            _eosio_repository_dir = tilde(input(utils.heredoc('''
-                Where is the EOSIO repository located on your machine?
-                Input an existing directory path:
-                ''') + "\n"))
+            _eosio_repository_dir = sys.argv[1]
 
         if not _eosio_repository_dir:
             _eosio_repository_dir = eosio_repository_dir
@@ -70,10 +67,7 @@ def install(wsl_root=None):
                 Input another existing directory path, or nothing to keep the current one:
                 ''').format(colored(contract_workspace_dir, current_path_color)) + "\n"))
         else:
-            _contract_workspace_dir = tilde(input(utils.heredoc('''
-                Where do you prefer to keep your smart-contract projects?
-                Input an existing directory path:
-                ''') + "\n"))
+            _contract_workspace_dir = sys.argv[2]
         if not _contract_workspace_dir:
             _contract_workspace_dir = contract_workspace_dir
         
