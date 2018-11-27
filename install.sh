@@ -79,7 +79,7 @@ sudo python -m pip install -e .
 printf "%s\n" "
 Configuring the eosfactory installation...
 "
-python3 eosfactory/install.py $1 $2 "${WSL_ROOT}"
+python eosfactory/install.py $1 $2 "${WSL_ROOT}"
 
 txtbld=$(tput bold)
 bldred=${txtbld}$(tput setaf 1)
