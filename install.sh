@@ -74,12 +74,12 @@ Installing the 'eosfactory' package locally with the Python pip system...
 # It is essentioal that the package is installed as a symlink, with 
 # the flag '-e'
 ###############################################################################
-sudo python -m pip install -e .
+sudo -H python3 -m pip install -e .
 
 printf "%s\n" "
 Configuring the eosfactory installation...
 "
-python eosfactory/install.py $1 $2 "${WSL_ROOT}"
+python3 eosfactory/install.py "$1" "$2" "${WSL_ROOT}"
 
 txtbld=$(tput bold)
 bldred=${txtbld}$(tput setaf 1)
