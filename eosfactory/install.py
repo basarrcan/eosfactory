@@ -24,7 +24,7 @@ def install(wsl_root=None):
         map = config.config_map()
         eosio_repository_dir = None
 
-        _eosio_repository_dir = sys.argv[1]
+        _eosio_repository_dir = "/opt/eos"
 
         if not _eosio_repository_dir:
             _eosio_repository_dir = eosio_repository_dir
@@ -42,7 +42,7 @@ def install(wsl_root=None):
         map = config.config_map()
         contract_workspace_dir = None
 
-        _contract_workspace_dir = sys.argv[2]
+        _contract_workspace_dir = "/home/circleci/testeos/contracts"
         if not _contract_workspace_dir:
             _contract_workspace_dir = contract_workspace_dir
         
